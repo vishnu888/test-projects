@@ -1,0 +1,18 @@
+syntax = "proto3";
+package com.nony.numericals;
+
+message Pair {
+    int32 num1 = 1;
+    int32 num2 = 2;
+}
+
+message Single {
+    int32 num = 1;
+}
+
+service BasicArithmetic {
+    rpc addNumbers (Pair) returns (Single) {};
+    rpc subtractNumbers (Pair) returns (Single) {};
+    rpc multiplyNumbers (Pair) returns (Single) {};
+    rpc divideNumbers (Pair) returns (Single) {};
+}
